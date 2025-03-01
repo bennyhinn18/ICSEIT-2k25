@@ -1,3 +1,5 @@
+
+"use client"
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -41,9 +43,9 @@ export default function RegistrationPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Category</TableHead>
-                  <TableHead colSpan={2}>National Delegates (Rs)</TableHead>
-                  <TableHead>International Delegates (USD)</TableHead>
+                  <TableHead className="text-black font-bold">Category</TableHead>
+                  <TableHead className="text-black font-bold" colSpan={2}>National Delegates (Rs)</TableHead>
+                  <TableHead className="text-black font-bold">International Delegates (USD)</TableHead>
                 </TableRow>
                 <TableRow>
                   <TableHead></TableHead>
@@ -157,6 +159,26 @@ export default function RegistrationPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
+                  <CreditCard className="h-5 w-5" />
+                  UPI Details
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <p>
+                  <strong>UPI ID:</strong> icseit25@upi
+                </p>
+                <p>
+                  <strong>Name:</strong> VEI Technologies Pvt. Ltd.
+                </p>
+                <div className="text-center mt-4">
+                <img src="https://infance-tony.github.io/ICSEIT-2K25/qr.png" alt="QR Code for Payment" width="500" height="550"></img>
+                <p className="mt-2">Scan the QR Code for UPI Payments.</p>
+            </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
                   Contact Information
                 </CardTitle>
@@ -174,6 +196,22 @@ export default function RegistrationPage() {
               </CardContent>
             </Card>
           </div>
+            <section className="px-4 mt-4">
+            <div className="container">
+              <h2 className="text-3xl font-bold mb-8">Quick Links</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <Button onClick={() => window.location.href = "/call-for-papers"} variant="outline" className="w-full text-primary border-primary hover:bg-primary hover:text-white">
+                  Call for Papers
+                </Button>
+                <Button onClick={() => window.location.href = "/submit-paper"} variant="outline" className="w-full text-primary border-primary hover:bg-primary hover:text-white">
+                  Submit a Paper
+                </Button>
+                <Button onClick={() => window.location.href = "/paper-template"} variant="outline" className="w-full text-primary border-primary hover:bg-primary hover:text-white">
+                  Paper Template
+                </Button>
+              </div>
+            </div>
+            </section>
         </div>
       </section>
     </div>

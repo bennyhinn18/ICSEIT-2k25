@@ -1,60 +1,7 @@
 export default function CallForPapers() {
   const tracks = [
     {
-      title: "Track – 1",
-      topics: [
-        "Waste Management",
-        "Remote Sensing & Geotechnical",
-        "Earthquake Engineering",
-        "Bridge Engineering & Coastal Engineering",
-        "Ecological Architecture",
-        "Computational Mechanics",
-        "Green Building Materials",
-        "Environmental Engineering",
-        "Clean Production Process",
-        "Transportation Engineering",
-        "Building Technology Science",
-        "Landscape Planning and Design",
-        "Traditional Construction Materials",
-        "Disaster Prevention and Mitigation",
-        "Civil and Architectural Engineering",
-        "Construction Technology & Infrastructural Development",
-        "Underground Facilities & Water Supply",
-      ],
-    },
-    {
-      title: "Track – 2",
-      topics: [
-        "Smart, Biomaterials and Renewable materials",
-        "Additive Manufacturing & Functionally graded materials",
-        "Super alloys",
-        "Heat Treatment of Materials & Powder Metallurgy",
-        "Thin films and coating technology Surface Engineering",
-        "Mechanical behavior of materials",
-        "Material characterization, Non-Destructive Evaluation & Failure analysis",
-        "Integrated computational materials engineering",
-        "Innovative materials processing Technologies",
-        "New and Renewable Energy",
-        "Sustainable Technologies for Energy Conversion",
-        "Energy Storage and Power Engineering",
-        "Sustainable Cities, Architecture and Green Buildings",
-        "Green Design, Products and Manufacturing Processes",
-        "Heating, Ventilation and Air Conditioning (HVAC)",
-        "Bio resource and Bio energy Hydrogen Energy and Hydrogen Production",
-        "Energy Efficiency and Applied Thermodynamics",
-        "Biofuel, Bioenergy, and Biorefinery",
-        "Bioplastic, Biomaterial, and Advanced Material",
-        "Biotechnology and Biochemical Engineering",
-        "Chemical Reaction Engineering and Catalysis",
-        "Combustion Technology,Tribology",
-        "Industrial Safety Techniques -Industries 5.0",
-        "Agricultural.Marine Machinery Technology",
-        "MEMS,NEMS",
-        "Waste to Wealth",
-      ],
-    },
-    {
-      title: "Track – 3",
+      title: "Track – 1 | Computer Science Engineering & AIDS",
       topics: [
         "Dependable, Reliable and Autonomic Computing",
         "Block Chain Technology",
@@ -66,7 +13,8 @@ export default function CallForPapers() {
         "IOT With Healthcare & Agriculture",
         "Distributed Data Analytics",
         "Multimedia And Multi-Structured Data",
-        "Real-World And Large-Scale Practices of Big Data Data Engineering Applications: Healthcare, Financial Systems",
+        "Real-World And Large-Scale Practices of Big Data",
+        "Data Engineering Applications: Healthcare, Financial Systems",
         "Internet Infornomics: E-Learning, E-Commerce, E-Business, E-Government, E-Society",
         "Internet Security: Biometrics, Boundary Issues, Broadband Access Technologies",
         "Swarm Intelligence, Ant Colony Optimisation",
@@ -90,6 +38,44 @@ export default function CallForPapers() {
         "Expert systems, Neural Networks, Fuzzy Logic",
         "Rough Sets, Granular Computing, Data Mining",
         "Evolutionary Algorithms, Learning Classifiers, SVM",
+      ],
+    },
+    {
+      title: "Track – 2 | Mechanical & Civil Engineering",
+      topics: [
+        "Smart, Biomaterials and Renewable materials",
+        "Additive Manufacturing & Functionally graded materials",
+        "Super alloys",
+        "Heat Treatment of Materials & Powder Metallurgy",
+        "Thin films and coating technology",
+        "Surface Engineering",
+        "Mechanical behavior of materials",
+        "Material characterization, Non-Destructive Evaluation & Failure analysis",
+        "Integrated computational materials engineering",
+        "Innovative materials processing Technologies",
+        "New and Renewable Energy",
+        "Sustainable Technologies for Energy Conversion",
+        "Energy Storage and Power Engineering",
+        "Sustainable Cities, Architecture and Green Buildings",
+        "Green Design, Products and Manufacturing Processes",
+        "Heating, Ventilation and Air Conditioning (HVAC)",
+        "Bio resource and Bio energy",
+        "Hydrogen Energy and Hydrogen Production",
+        "Energy Efficiency and Applied Thermodynamics",
+        "Biofuel, Bioenergy, and Biorefinery",
+        "Bioplastic, Biomaterial, and Advanced Material",
+        "Biotechnology and Biochemical Engineering",
+        "Chemical Reaction Engineering and Catalysis",
+        "Combustion Technology, Tribology",
+        "Industrial Safety Techniques - Industries 5.0",
+        "Agricultural, Marine Machinery Technology",
+        "MEMS, NEMS",
+        "Waste to Wealth",
+      ],
+    },
+    {
+      title: "Track - 3 | Electrical, Electronics & Communication Engineering",
+      topics: [
         "Power System",
         "Integrated Circuit",
         "Nano-Photonics",
@@ -106,7 +92,7 @@ export default function CallForPapers() {
         "Advanced Control Strategies In Electric Vehicle",
         "Smart Grid, Micro Grid And Demand Response",
         "Advanced Metering Instrumentation And Communication System",
-        "New Advance In Energy Storage Technologies Like Battery, Ultra Capacitors, Super Magnetic Energy Storage Systems,",
+        "New Advance In Energy Storage Technologies Like Battery, Ultra Capacitors, Super Magnetic Energy Storage Systems",
         "Real Time Distribution Simulation",
         "Renewable Energy Sources",
         "Advanced Material For Photo Voltaic Cells",
@@ -132,9 +118,13 @@ export default function CallForPapers() {
       <p className="text-gray-700 mb-6">Submissions are open and accepted for all domains</p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {tracks.map((track, index) => (
-          <div key={index} className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">{track.title}</h3>
-            <ul className="space-y-2">
+          
+          <div key={index} className="bg-gray-50  rounded-lg">
+            <div>
+                    <h3 className="text-xl font-semibold mb-4 bg-primary text-white p-1 text-center">{track.title}</h3>
+                </div>
+            
+            <ul className="space-y-2 p-6">
               {track.topics.map((topic, topicIndex) => (
                 <li key={topicIndex} className="text-gray-700">
                   {topic}

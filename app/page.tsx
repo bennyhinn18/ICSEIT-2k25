@@ -37,8 +37,7 @@ export default function Home() {
             International Conference on Sustainable Engineering & Innovative Technologies
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Organized by the Departments of Computer Science & Engineering, Mechanical Engineering, and Electronics &
-            Communication Engineering
+           Joinly Organized by the Departments of Computer Science & Engineering, Civil Engineering and Mechanical Engineering
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-lg">
             <div className="flex items-center gap-2">
@@ -54,7 +53,7 @@ export default function Home() {
             <Button asChild size="lg">
               <Link href="/registration">Register Now</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button  size="lg" asChild className="text-primary bg-white hover:text-white hover:bg-primary">
               <Link href="/call-for-papers">Submit Paper</Link>
             </Button>
           </div>
@@ -108,7 +107,7 @@ export default function Home() {
           <Timeline items={importantDates} />
         </div>
       </section>
-
+  
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container text-center">
@@ -116,7 +115,7 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join us for two days of inspiring talks, networking opportunities, and cutting-edge research presentations.
           </p>
-          <Button size="lg" variant="secondary" asChild>
+          <Button size="lg" variant="secondary" className="text-white" asChild>
             <Link href="/registration" className="flex items-center gap-2">
               Register Now <ArrowRight className="h-4 w-4" />
             </Link>

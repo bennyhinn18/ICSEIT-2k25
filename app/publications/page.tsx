@@ -1,3 +1,4 @@
+import Timeline from "@/components/timeline"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, Award, FileText } from "lucide-react"
 
@@ -5,7 +6,7 @@ export default function PublicationsPage() {
   const publications = [
     {
       type: "Conference Proceedings",
-      details: "All accepted papers will be published in conference proceedings with ISBN number 978-93-342-0319-6",
+      details: "All selected papers will be published in conference proceedings with ISBN number 978-93-342-0319-6",
       icon: BookOpen,
     },
     {
@@ -13,6 +14,14 @@ export default function PublicationsPage() {
       details: "Selected papers will be published in Scopus/WoS-indexed journals (additional charges apply)",
       icon: Award,
     },
+  ]
+  const importantDates = [
+    { date: "15th March, 2025", event: "Full Paper Submission Deadline" },
+    { date: "20th March, 2025", event: "Notification of Acceptance" },
+    { date: "31st March, 2025", event: "Camera-ready Paper Submission" },
+    { date: "5th April, 2025", event: "Early Bird Registration Deadline" },
+    { date: "11th April, 2025", event: "Conference Day 1" },
+    { date: "12th April, 2025", event: "Conference Day 2" },
   ]
 
   const guidelines = [
@@ -50,6 +59,20 @@ export default function PublicationsPage() {
             ))}
           </div>
 
+            <Timeline items={importantDates} />
+
+          <div className="container mb-4">
+      <h2 className="text-3xl font-bold mb-3">Instructions to Authors</h2>
+      <div className="p-1">
+        <p>
+            The authors willing to present papers in the conference are requested to submit the full-length paper not exceeding 6 pages (in IEEE format) by e-mail as an attachment to <strong><a href="mailto:conferencemech@stellamaryscoe.edu.in">conferencemech@stellamaryscoe.edu.in</a></strong> on or before the last date for submission. All the papers will be peer-reviewed by the experts. Authors of the selected paper will be intimated through e-mail.
+        </p>
+        <p>
+            The first author should incorporate the reviewers' comments and submit the camera-ready paper along with the registration form. The registration fee includes the conference kit, refreshments, and working lunch. Accommodation will be provided based on prior request with an additional cost.
+        </p>
+      </div>
+      
+  </div>
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
